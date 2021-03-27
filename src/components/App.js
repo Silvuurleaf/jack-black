@@ -1,16 +1,19 @@
 import '../css/App.css';
+import Deck from './deck.js'
 
-
-//sdaasdasda
 
 function App() {
-  return (
-    <div className="App">
-      <header>
-        hello world
-      </header>
-    </div>
-  );
+    const deck = new Deck()
+    deck.shuffle()
+    console.log(deck.cards)
+
+    return(
+        <div className="App">
+        <header>
+            hello world
+        </header>
+        </div>
+    );
 }
 
 export default App;
