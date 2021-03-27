@@ -1,5 +1,6 @@
 import '../css/App.css';
 import Deck from './deck.js'
+import QuestionBank from "./question";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -8,6 +9,13 @@ function App()
     const deck = new Deck()
     deck.shuffle()
     console.log(deck.cards)
+
+    const qb = new QuestionBank();
+    let value = deck.drawCard().value;
+    console.log(value);
+    if (value === "J") {
+        console.log(qb.oneQuestion);
+    }
 
     return(
         <>
